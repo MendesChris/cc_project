@@ -1,0 +1,29 @@
+Requisitos Funcionais e Não Funcionais:
+	
+Requisitos Funcionais
+
+•	O site deverá mostrar para o usuário o saldo em sua conta;
+•	O site deverá mostrar o extrato de sua conta, ou seja, o histórico de movimentações de sua conta;
+•	No site na aba extrato terá uma sub aba com lançamentos futuros geral;
+•	No site na aba extrato terá uma sub aba com lançamentos futuros a debitar;
+•	No site na aba extrato terá uma sub aba com lançamentos futuros a compensar;
+•	O site devera ter uma aba chamada de transações;
+•	No site na aba transações terá uma sub aba com o botão transferência;
+•	No site na aba transações terá uma sub aba com o botão transferência DOC;
+•	No site na aba transações terá uma sub aba com o botão transferência TED;
+•	No site na aba transações terá uma sub aba com o botão transferência PIX;
+•	No site na aba transações terá uma sub aba com o botão pagar contas;
+•	O site terá um botão calculadora que exibirá para o usuário o resultado (calculadora simples);
+•	O site deverá exigir um usuário e senha para acessá-lo.
+
+Requisitos Não Funcionais
+
+•	O site deverá ser amigável, ou seja, intuitivo e de fácil entendimento de suas funções;
+•	O site deverá ser seguro, ou seja, contra invasões e roubo de dados (dentro das normas LGPD);
+•	O site deverá ser responsivo;
+•	O site deverá gerar um relatório de logins;
+•	O site deverá gerar um comprovante (relatório) após uma transferência bem-sucedida;
+•	O site deverá gerar uma mensagem para o usuário após uma transferência malsucedida;
+•	O site deverá gerar um comprovante (relatório) após um pagamento bem-sucedido;
+•	O site deverá gerar uma mensagem para o usuário após um pagamento malsucedido;
+•	O site não guardará dados dos cálculos matemáticos (calculadora);
