@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPBank | Pessoas Físicas</title>
+	<meta charset="utf-8">
+
+	<!-- Menu -->
+	<meta name="vierport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Biblioteca Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Fontes Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+
+</head>
+<body>
+	<!-- Cabeçalho -->
+	<header>
+		<nav>
+		<div class="toggle">
+			<div class="menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		</div>
+		<ul>
+			<li><a href="#">SERVIÇOS</a></li>
+			<li><a href="#">QUEM SOMOS</a></li>
+			<li><a href="#">LOCALIZAÇÃO</a></li>
+		</ul>
+	</nav>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.menu').click(function(){
+				$('ul').toggleClass('active');
+			})
+		})
+	</script>
+
+		<img id="logotipo" src="img/logotipo.png"> <!-- Logotipo -->
+
+		<!-- Login -->
+			<form id="direcao" method="post">
+				<input type="text" name="cpf" placeholder="CPF" value="{{ cpf }}">
+				<input type="password" name="password" placeholder="Senha" value="{{ password }}">
+				<input type="submit" name="" value="Entrar">
+			</form>
+
+		<img id="banner" src="img/banner.png" alt="banner" width="500" height="440"> <!-- Banner -->
+	
+		<!-- Acordeão -->
+		<button class="accordion">ABRIR UMA CONTA</button>
+		<div class="panel" id="back">
+			<form>
+				<br>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Nome</label>
+						<input type="text" class="form-control" id="" placeholder="Informe seu nome: ">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Sobrenome</label>
+						<input type="text" class="form-control" id="" placeholder="Informe seu sobrenome: ">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label for="inputEmail4">CPF</label>
+						<input type="text" class="form-control" id="" placeholder="Informe seu CPF sem caracteres!">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputState">Gênero</label>
+						<select id="inputState" class="form-control">
+							<option selected>Selecione uma opção...</option>
+							<option>Feminino</option>
+							<option>Masculino</option>
+							<option>Outros</option>
+						</select>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputPassword4">Telefone Celular</label>
+						<input type="number" class="form-control" id="" placeholder="Informe seu número para contato: ">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">E-mail</label>
+						<input type="email" class="form-control" id="" placeholder="Digite seu e-mail: ">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="inputPassword4">Senha</label>
+						<input type="password" class="form-control" id="" placeholder="Digite sua senha: ">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-3">
+						<label for="inputEmail4">CEP</label>
+						<input type="email" class="form-control" id="" placeholder="Informe o CEP de sua região: ">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="inputPassword4">Rua/Avenida</label>
+						<input type="password" class="form-control" id="" placeholder="Informe seu endereço: ">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="inputEmail4">Número</label>
+						<input type="email" class="form-control" id="" placeholder="Informe o número da sua residência: ">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="inputEmail4">Bairro</label>
+						<input type="email" class="form-control" id="" placeholder="Informe o bairro de sua moradia: ">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Cadastrar-me</button>
+
+			</form>
+		</div>
+
+		<script type="text/javascript">
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+			    acc[i].addEventListener("click", function(){
+			        this.classList.toggle("active");
+
+			        var panel = this.nextElementSibling;
+			        if (panel.style.display === "block"){
+			            panel.style.display = "none";
+			        }else{
+			            panel.style.display = "block";
+			        }
+			    });
+			}
+		</script>
+	</header>
+
+	<!-- Conteudo -->
+	<section>
+		<!-- Serviços -->
+		<h2>SERVIÇOS</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="img/icon1.png" alt="Icone">
+					<p>Deposito imediato da sua carteira para sua conta.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="img/icon2.png" alt="Icone">
+					<p>Saque seu dinheiro da foma mais fácil, rápida e segura.</p>
+				</div>
+				<div class="col-md-4">
+					<img src="img/icon3.png" alt="Icone">
+					<p>Transfira valores de diversas formas, sem dor de cabeça.</p>
+				</div>
+			</div>
+		</div>
+
+		<hr> <!-- Linha -->
+
+		<!-- Quem Somos -->
+		<h2>QUEM SOMOS</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="img/apertomao.png" alt="Aperto de mão" width="350" height="350">
+				</div>
+				<div class="col-md-6">
+					<p>O Banco UPBank é o 1º banco 100% digital do país e o único a oferecer uma conta totalmente isenta de tarifas.<br>
+						Acreditamos que a relação das pessoas com seu banco pode ser muito mais simples, transparente e justa. E estamos fazendo essa transformação acontecer.<br><br>
+					<b>NOSSA VISÃO: </b><br>
+						Ser a empresa que proporciona a melhor experiência para a vida das pessoas e promove o desenvolvimento da sociedade, de forma inovadora, eficiente e sustentável.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<hr> <!-- Linha -->
+
+		<!-- Contato & Localização -->
+		<h2>CONTATO & LOCALIZAÇÃO</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14632.38606212828!2d-46.6656795!3d-23.5290308!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x758fb9438c746262!2sUNINOVE%20-%20Campus%20Memorial!5e0!3m2!1spt-BR!2sbr!4v1572716062424!5m2!1spt-BR!2sbr" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
+				<div class="col-md-6">
+					<p>
+						<b>Endereço: </b><br>Av. Dr. Adolpho Pinto, 109 - Barra Funda, São Paulo - SP, 01156-050.<br><br>
+						<b>E-mail: </b><br>relacionamento@upbank.com.br<br><br>
+						<b>Telefone: </b><br>+55 11 3823-9000<br><br>
+						<b>WhatsApp: </b><br>+55 11 9.4930-6894<br><br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<br>
+	</section>
+
+	<!-- Rodapé -->
+	<footer>
+		©2019 - Todos os Direitos Reservados | Desenvolvido por CC - ProjUninove
+	</footer>
+</body>
+</html>

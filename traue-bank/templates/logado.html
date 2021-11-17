@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portal | UPBank</title>
+
+	<meta charset="utf-8">
+	
+	<!-- Biblioteca Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<!-- Cabeçalho -->
+	<header>
+		<img id="logotipo1" src="img/logotipo.png"> <!-- Logotipo -->
+	</header>
+
+	<!-- Conteudo -->
+	<section>
+			<div class="container">
+				<div class="row">
+						<div class="col-md-6">
+							EXIBIR DADOS.
+						</div>
+
+						<!-- Acordeão -->
+						<div class="col-md-6">
+							<button class="accordion">TRANSFERÊNCIA</button>
+							<div class="panel">
+								<p>Formulario</p>
+							</div>
+
+							<button class="accordion">DEPÓSITO</button>
+							<div class="panel">
+								<p>Formulario</p>
+							</div>
+
+							<button class="accordion">BITCOIN</button>
+							<div class="panel">
+								<p>Formulario</p>
+							</div>
+
+						<script type="text/javascript">
+							var acc = document.getElementsByClassName("accordion");
+							var i;
+							for (i = 0; i < acc.length; i++) {
+					 	  	acc[i].addEventListener("click", function(){
+					 	    this.classList.toggle("active");
+
+					  	    var panel = this.nextElementSibling;
+					   	   	if (panel.style.display === "block"){
+					    		panel.style.display = "none";
+					       	}else{
+					            panel.style.display = "block";
+					        }
+					    	});
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Rodapé -->
+	<footer>
+		©2019 - Todos os Direitos Reservados | Desenvolvido por CC - ProjUninove
+	</footer>
+</body>
+</html>

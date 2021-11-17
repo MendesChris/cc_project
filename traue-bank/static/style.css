@@ -1,0 +1,161 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #e9e9e9;
+}
+footer{
+	margin: 0;
+	padding: 0.5%;
+	background-color: #373740;
+	color: #53535c;
+	text-align: center;
+	margin-top: 2%;
+}
+hr{
+	width: 70%;
+	text-align: center;
+}
+h2{
+	font-family: 'Open Sans', sans-serif;
+	color: #FFA500;
+	text-align: center;
+	margin: 2%;
+}
+p{
+	font-family: 'Open Sans', sans-serif;
+	color: #373740;
+	font-size: 16px;
+	text-align: center;
+}
+div{
+	text-align: center;
+}
+#direcao{
+	position: absolute;
+	margin-left: 60%;
+	margin-top: 10%;
+}
+#back{
+	background-color: #e9e9e9;
+}
+#logotipo{
+	margin-top: 1%;
+	margin-left: 3%;
+	position: absolute;
+}
+#logotipo1{
+	margin-left: 2%;
+	margin-bottom: 3%;
+}
+#banner{
+	float: right;
+    margin-right: 40%;
+    margin-top: 3.3%;
+    margin-bottom: 1.5%;
+}
+
+/* Acordeão */
+.accordion {
+	background-color: #ff8c00;
+	color: #E9E9E9;
+	cursor: pointer;
+	padding: 13px;
+	width: 100%;
+	text-align: center;
+	outline: none;
+	transition: 0.4s;
+	font: 'Open Sans', sans-serif;
+}
+.active, .accordion:hover{
+	background-color: #FFA500;
+}
+.panel{
+	padding: 0 18px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+}
+.accordion:after {
+	content: '\02795';
+	font-size: 15px;
+	float: right;
+	margin-left: 5px;
+}
+.active:after {
+	content: "\2796";
+}
+
+@media(max-width: 768px){
+	#banner{
+		margin: 0% 0% 0% 10%;
+		float: left;
+		width: 400px;
+		height: 350px;
+	}
+	#logotipo{
+		position: relative;
+		margin-left: 40%;
+		width: 130px;
+		height: 130px;
+	}
+	#logotipo1{
+		margin-left: 30%;
+		margin-bottom: 1%;
+	}
+	#direcao{
+		position: relative;
+		text-align: center;
+		margin-bottom: 2%;
+		margin-top: -1%;
+		margin-left: -1%;
+	}
+}
+/* Menu */
+nav{
+	width: 100%;
+}
+ul{
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+}
+ul li{
+	float: right;
+	margin-top: 3%;
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
+}
+ul li:hover{
+	background: #ffa500;
+}
+ul li a{
+	color: #191970;
+	text-decoration: none;
+}
+.toggle{
+	width: 100%;
+	padding: 10px 20px;
+	background: #001f44;
+	text-align: right;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 30px;
+	display: none;
+}
+@media(max-width: 768px){
+	.toggle{
+		display: block;
+}
+ul{
+	width: 100%;
+	display: none;
+}
+ul li{
+	display: block;
+	text-align: center;
+}
+.active{
+	display: block;
+}
+}

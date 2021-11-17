@@ -1,6 +1,8 @@
 from typing import List
 
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Request, Form
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas
@@ -9,6 +11,8 @@ from .database import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static/"), name="static")
+template = Jinja2Templates(directory='templates/')
 
 
 # Dependency
@@ -19,6 +23,27 @@ def get_db():
     finally:
         db.close()
 
+@app.get('/form')
+def read_form(request: Request):
+    result = 'type a type'
+    return template.TemplateResponse('form.html', context={'request': request, 'result': result})
+
+@app.post('/form')
+def post_form(request: Request, num: int = Form(...)):
+    result = num*2
+    print(num)
+    return template.TemplateResponse('form.html', context={'request': request, 'result': result, 'num':num})
+
+@app.post('/')
+def post_index(request: Request, cpf: str = Form(...), password: str = Form(...)):
+    print(cpf, password)
+    test = "abwp[oerjwpkortp[werkt[pwerkt[wepk"
+    return template.TemplateResponse('index.html', context={'request': request, 'test': test, 'cpf': cpf})
+
+@app.get('/')
+def get_index(request: Request):
+    test = "abwp[oerjwpkortp[werkt[pwerkt[wepk"
+    return template.TemplateResponse('index.html', context={'request': request, 'test': test})
 
 @app.post("/users/", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
