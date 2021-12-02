@@ -16,27 +16,32 @@ withdraw        |   withdraw from account balance|  value
 
 #### Users
 
-field   	| type
----     	|   ---
-id      	|   int
-nome		|   string
-sobrenome	|   string
-cpf	    	|   string
-genero		|   string
-telefone	|   string
-email		|   string
-senha		|   string
-cep	    	|   string
-endereco	|   string
-numero		|   int
-bairro  	|   string
-balance 	|   float
+field   	| type      |   nullable
+---     	|   ---     |   ---
+id      	|   int     |   não
+nome		|   string	|   não
+sobrenome	|   string	|   não
+cpf	    	|   string	|   não
+genero		|   string	|   não
+telefone	|   string	|   não
+email		|   string	|   não
+senha		|   string	|   não
+cep	    	|   string	|   não
+endereco	|   string	|   não
+numero		|   int     |   não
+bairro  	|   string	|   não
+balance 	|   float   |   não
+
+**primary-key:** id
 
 #### Transactions
 
-field   |   type    |   none
+field   | type      |   nullable
 ---     |   ---     |   ---
-type    |   ENUM    |   no
-from    |   int     |   no
-value   |   float   |   no
-to      |   int     |   yes
+id      |   int     |   não
+type    |   ENUM    |   não
+from    |   int     |   não
+value   |   float   |   não
+to      |   int     |   sim
+
+**primary-key:** id
