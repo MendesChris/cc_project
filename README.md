@@ -1,3 +1,5 @@
+###### Este projeto é um trabalho universitário.
+
 # Traue Bank
 
 ## Objetivos
